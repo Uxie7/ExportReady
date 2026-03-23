@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       {/* ══ HERO ═════════════════════════════════════════════════════════════════════ */}
-      <div style={{ background: "linear-gradient(135deg,#0a1628 0%,#0f2347 60%,#0a1628 100%)", padding: "72px 40px", position: "relative", overflow: "hidden" }}>
+      <div className="full-bleed hero-section" style={{ background: "linear-gradient(135deg,#0a1628 0%,#0f2347 60%,#0a1628 100%)", padding: "72px 40px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(circle at 20% 50%,rgba(29,110,245,0.15) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(16,185,129,0.1) 0%,transparent 40%)", pointerEvents: "none" }} />
         <div style={{ maxWidth: 760, margin: "0 auto", textAlign: "center", position: "relative" }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(29,110,245,0.15)", border: "1px solid rgba(29,110,245,0.3)", borderRadius: 99, padding: "5px 16px", marginBottom: 24 }}>
@@ -28,7 +28,7 @@ export default function Home() {
 
       {/* ══ STATS ════════════════════════════════════════════════════════════════════ */}
       <div style={{ background: "#fff", borderBottom: "1px solid #e8edf5", padding: "24px 40px" }}>
-        <div style={{ maxWidth: 1000, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 24 }}>
+        <div className="landing-stats" style={{ maxWidth: 1000, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 24 }}>
           {[
             { v: "527", l: "EU rejections of Indian food (2020–24)", icon: "🚫" },
             { v: "₹3,200Cr", l: "Lost annually in rejected shipments", icon: "💸" },
@@ -52,7 +52,7 @@ export default function Home() {
           <h2 style={{ fontFamily: "Fraunces, serif", fontSize: 34, fontWeight: 700, margin: "0 0 10px" }}>Who ExportReady Serves</h2>
           <p style={{ color: "#64748b", fontSize: 15 }}>Three customer types. All with real compliance pain. All with budget to solve it.</p>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20 }}>
+        <div className="landing-customers" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20 }}>
           {[
             { icon: "🏭", title: "Export Houses", tag: "PRIMARY", tagColor: "#dbeafe", tagText: "#1d4ed8", desc: "Manage compliance for 50–200 supplier products across multiple markets. Currently paying ₹5–15L/year to consultants.", pay: "₹15,000–25,000/month", saving: "Replaces ₹5–15L/year consultant" },
             { icon: "🌾", title: "Food Processors", tag: "SECONDARY", tagColor: "#dcfce7", tagText: "#166534", desc: "₹5–50Cr revenue businesses exporting directly. Have finance teams but no in-house compliance expertise.", pay: "₹4,999 per product report", saving: "10x cheaper than consultants" },

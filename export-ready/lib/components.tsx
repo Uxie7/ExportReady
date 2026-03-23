@@ -1,4 +1,45 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
+
+// ─── NAVBAR ═════════════════════════════════════════════════════════════════
+export const Navbar = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  return (
+    <header className="navbar">
+      <div className="navbar-left">
+        <a href="/" className="brand-link" onClick={() => setMobileMenuOpen(false)}>
+          <div className="brand-logo">🌐</div>
+          <div>
+            <div className="brand-title">ExportReady</div>
+            <div className="brand-subtitle">FOOD COMPLIANCE PLATFORM</div>
+          </div>
+        </a>
+      </div>
+
+      <button className="hamburger" onClick={() => setMobileMenuOpen((p) => !p)} aria-label="Toggle menu" type="button">
+        {mobileMenuOpen ? "✖" : "☰"}
+      </button>
+
+      <nav className={`navbar-menu ${mobileMenuOpen ? "open" : ""}`}>
+        {[
+          { href: "/", label: "Home" },
+          { href: "/check", label: "Check Product" },
+          { href: "/dashboard", label: "Dashboard" },
+          { href: "/markets", label: "Markets" },
+        ].map((nav) => (
+          <a key={nav.href} href={nav.href} className="navbar-item" onClick={() => setMobileMenuOpen(false)}>
+            {nav.label}
+          </a>
+        ))}
+        <a href="/check" className="cta-btn" onClick={() => setMobileMenuOpen(false)}>
+          Get Started →
+        </a>
+      </nav>
+    </header>
+  );
+};
 
 // ─── BADGE ═════════════════════════════════════════════════════════════════
 export const Badge = ({ children, color, text }: { children: React.ReactNode; color: string; text: string }) => (

@@ -5,14 +5,14 @@ import { Badge, ScoreRing, styles } from "@/lib/components";
 
 export default function Dashboard() {
   return (
-    <div style={{ padding: "36px 40px", maxWidth: 1000, margin: "0 auto" }}>
+    <div className="page-content" style={{ padding: "36px 40px", maxWidth: 1000, margin: "0 auto" }}>
       <div style={{ marginBottom: 28 }}>
         <div style={{ fontSize: 12, color: "#1d6ef5", fontWeight: 700, letterSpacing: 1, marginBottom: 6 }}>EXPORT HOUSE DASHBOARD</div>
         <h2 style={{ fontFamily: "Fraunces, serif", fontSize: 30, fontWeight: 800, margin: 0 }}>Compliance Overview</h2>
       </div>
 
       {/* ── KEY METRICS ── */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14, marginBottom: 24 }}>
+      <div className="responsive-grid-4" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14, marginBottom: 24 }}>
         {[
           { label: "Total Products", value: "137", sub: "across 3 clients", color: "#1d6ef5" },
           { label: "Export Ready", value: "89", sub: "65% of portfolio", color: "#10b981" },

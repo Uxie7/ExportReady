@@ -68,7 +68,7 @@ export default function CheckProduct() {
   };
 
   return (
-    <div style={{ padding: "48px 40px", maxWidth: 760, margin: "0 auto" }}>
+    <div className="page-content" style={{ padding: "48px 40px", maxWidth: 760, margin: "0 auto" }}>
       {/* ── STEP INDICATOR ── */}
       {step < 4 && (
         <div style={{ display: "flex", alignItems: "center", gap: 0, marginBottom: 40 }}>
@@ -170,7 +170,7 @@ export default function CheckProduct() {
               </div>
             ))}
 
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16, marginBottom: 22 }}>
+            <div className="responsive-grid-3" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16, marginBottom: 22 }}>
               <div>
                 <label style={{ fontSize: 11, fontWeight: 700, color: "#64748b", letterSpacing: 1, display: "block", marginBottom: 8 }}>
                   PRODUCT CATEGORY <span style={{ color: "#ef4444" }}>*</span>

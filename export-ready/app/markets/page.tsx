@@ -6,13 +6,13 @@ import { Badge, ScoreRing, styles } from "@/lib/components";
 
 export default function Markets() {
   return (
-    <div style={{ padding: "48px 40px", maxWidth: 880, margin: "0 auto" }}>
+    <div className="page-content" style={{ padding: "48px 40px", maxWidth: 880, margin: "0 auto" }}>
       <div style={{ marginBottom: 32 }}>
         <div style={{ fontSize: 12, color: "#1d6ef5", fontWeight: 700, letterSpacing: 1, marginBottom: 6 }}>MARKET INTELLIGENCE</div>
         <h2 style={{ fontFamily: "Fraunces, serif", fontSize: 30, fontWeight: 800, margin: 0 }}>Export Market Overview</h2>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
+      <div className="responsive-grid-2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
         {MARKETS.map((m) => {
           const d = COMPLIANCE_DATA[m.code as keyof typeof COMPLIANCE_DATA];
           return (

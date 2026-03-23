@@ -24,7 +24,7 @@ export default function Report() {
   const pendingCount = reportData.items.filter((i) => i.status === "pending").length;
 
   return (
-    <div style={{ padding: "32px 40px", maxWidth: 1000, margin: "0 auto" }}>
+    <div className="page-content" style={{ padding: "32px 40px", maxWidth: 1000, margin: "0 auto" }}>
       {/* ── HEADER ── */}
       <div style={{ background: "linear-gradient(135deg,#0a1628,#0f2347)", borderRadius: 20, padding: "26px 32px", marginBottom: 22, color: "#fff", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 20 }}>
         <div>
